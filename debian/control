@@ -14,7 +14,7 @@ Architecture: any
 Depends: libdelaygen1.1.1 (= ${binary:Version}),
          ${shlibs:Depends}, ${misc:Depends},
          ${epics:Depends},
-Conflicts: epics-synapps,
+Conflicts: epics-synapps-dev, epics-synapps,
 Description: EPICS driver for programmable delay generators
  Support for programmable trigger signal generators
  .
@@ -23,8 +23,17 @@ Description: EPICS driver for programmable delay generators
 Package: libdelaygen1.1.1
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
-Conflicts: epics-synapps,
 Description: EPICS driver for programmable delay generators
  Support for programmable trigger signal generators
  .
  This package contains runtime libraries
+
+Package: boy-delaygen
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends},
+         epics-delaygen-dev (>= ${source:Version}), epics-delaygen-dev (<< ${source:Version}.1~),
+Description: EPICS driver for programmable delay generators
+ Support for programmable trigger signal generators
+ .
+ This package contains .opi files for use with the cs-studio BOY
+ generic operator interface tool.
