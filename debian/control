@@ -1,0 +1,30 @@
+Source: delaygen
+Section: libdevel
+Priority: extra
+Maintainer: Michael Davidsaver <mdavidsaver@gmail.com>
+Build-Depends: debhelper (>= 9), epics-debhelper (>= 8.14~),
+               epics-dev,
+Standards-Version: 3.9.6
+Homepage: http://aps.anl.gov/bcda/synApps/delaygen/delaygen.html
+Vcs-Git: https://github.com/epicsdeb/delaygen.git
+Vcs-Browser: https://github.com/epicsdeb/delaygen
+
+Package: epics-delaygen-dev
+Architecture: any
+Depends: libdelaygen1.1.1 (= ${binary:Version}),
+         ${shlibs:Depends}, ${misc:Depends},
+         ${epics:Depends},
+Conflicts: epics-synapps,
+Description: EPICS driver for programmable delay generators
+ Support for programmable trigger signal generators
+ .
+ This package contains headers and libraries needed at build time.
+
+Package: libdelaygen1.1.1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+Conflicts: epics-synapps,
+Description: EPICS driver for programmable delay generators
+ Support for programmable trigger signal generators
+ .
+ This package contains runtime libraries
