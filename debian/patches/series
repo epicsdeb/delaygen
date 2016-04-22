@@ -1,0 +1,4 @@
+0001-fixup-RELEASE.patch
+0002-cleanup-const-char-warning-in-DG645.patch
+0003-install-db-req-protocol.patch
+0004-don-t-build-app-and-vxworks-dbd.patch

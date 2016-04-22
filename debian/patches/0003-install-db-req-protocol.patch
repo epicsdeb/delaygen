@@ -1,0 +1,36 @@
+From: Michael Davidsaver <mdavidsaver@gmail.com>
+Date: Fri, 22 Apr 2016 09:05:00 -0400
+Subject: install db/req/protocol
+
+---
+ delaygenApp/Db/Makefile | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+diff --git a/delaygenApp/Db/Makefile b/delaygenApp/Db/Makefile
+index df73d39..cf77a07 100644
+--- a/delaygenApp/Db/Makefile
++++ b/delaygenApp/Db/Makefile
+@@ -4,6 +4,18 @@ include $(TOP)/configure/CONFIG
+ #----------------------------------------
+ #  ADD MACRO DEFINITIONS AFTER THIS LINE
+ 
++DB += BNC_505.db
++DB += BNC_505_Pn.db
++DB += BNC_505.protocol
++DB += colbyPDL100A.db
++DB += colbyPDL100A.req
++DB += devDG535daa.db
++DB += devDG535.db
++DB += drvAsynCoherentSDG.db
++DB += drvAsynCoherentSDG.req
++DB += drvDG645.db
++DB += drvDG645_settings.req
++
+ #----------------------------------------------------
+ #  Optimization of db files using dbst (DEFAULT: NO)
+ #DB_OPT = YES
+@@ -20,4 +32,3 @@ include $(TOP)/configure/RULES
+ 
+ #----------------------------------------
+ #  ADD RULES AFTER THIS LINE
+-

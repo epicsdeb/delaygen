@@ -1,0 +1,51 @@
+From: Michael Davidsaver <mdavidsaver@gmail.com>
+Date: Fri, 22 Apr 2016 09:07:07 -0400
+Subject: don't build app and vxworks dbd
+
+---
+ delaygenApp/src/Makefile                  | 8 ++++----
+ delaygenApp/src/iocdelaygenAppInclude.dbd | 2 +-
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/delaygenApp/src/Makefile b/delaygenApp/src/Makefile
+index 6d0ef26..b6873d6 100644
+--- a/delaygenApp/src/Makefile
++++ b/delaygenApp/src/Makefile
+@@ -26,12 +26,12 @@ delaygen_LIBS_vxWorks += $(EPICS_BASE_IOC_LIBS)
+ 
+ #=============================================================================
+ # Build an IOC application
+-PROD_IOC = delaygenApp
++#PROD_IOC = delaygenApp
+ 
+ #-----------------------------------------------------------------------------
+ # <name>.dbd will be created and installed
+-DBD += iocdelaygenApp.dbd
+-DBD += iocdelaygenAppVxWorks.dbd 
++#DBD += iocdelaygenApp.dbd
++#DBD += iocdelaygenAppVxWorks.dbd 
+ 
+ DBD += devDG535.dbd
+ DBD += drvAsynDG645.dbd
+@@ -47,7 +47,7 @@ delaygenApp_SRCS_vxWorks += iocdelaygenAppVxWorks_registerRecordDeviceDriver.cpp
+ 
+ #-----------------------------------------------------------------------------
+ # Include libraries
+-delaygenApp_LIBS += autosave calc delaygen asyn
++delaygenApp_LIBS += calc delaygen asyn
+ ifdef STREAM
+ 	delaygenApp_LIBS += stream
+ endif
+diff --git a/delaygenApp/src/iocdelaygenAppInclude.dbd b/delaygenApp/src/iocdelaygenAppInclude.dbd
+index 44adcc8..4d23db2 100644
+--- a/delaygenApp/src/iocdelaygenAppInclude.dbd
++++ b/delaygenApp/src/iocdelaygenAppInclude.dbd
+@@ -13,7 +13,7 @@ include "drvAsynIPPort.dbd"
+ 
+ #------------------------------------------------------------------------------
+ # Autosave support
+-include "asSupport.dbd"
++#include "asSupport.dbd"
+ 
+ #------------------------------------------------------------------------------
+ # Calc support
