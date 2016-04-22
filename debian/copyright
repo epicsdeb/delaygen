@@ -4,7 +4,7 @@ Upstream-Contact: Dohn Arms <dohnarms@anl.gov>
 Source: http://aps.anl.gov/bcda/synApps/delaygen/delaygen.html
 
 Files: *
-Copyright: The University of Chicago, as Operator of Argonne National Lab
+Copyright: Copyright 2015 The University of Chicago, as Operator of Argonne National Lab
 License: EPICS
   delaygen is distributed subject to the following license conditions:
   .
