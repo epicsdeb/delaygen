@@ -3,7 +3,7 @@ Section: libdevel
 Priority: extra
 Maintainer: Michael Davidsaver <mdavidsaver@gmail.com>
 Build-Depends: debhelper (>= 9), epics-debhelper (>= 8.14~),
-               epics-dev,
+               epics-dev, epics-asyn-dev, epics-calc-dev,
 Standards-Version: 3.9.6
 Homepage: http://aps.anl.gov/bcda/synApps/delaygen/delaygen.html
 Vcs-Git: https://github.com/epicsdeb/delaygen.git
