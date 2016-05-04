@@ -7,7 +7,7 @@ Subject: fixup RELEASE
  1 file changed, 7 insertions(+), 12 deletions(-)
 
 diff --git a/configure/RELEASE b/configure/RELEASE
-index 0e2c166..1a76b2c 100644
+index 0e2c166..b4c8a27 100644
 --- a/configure/RELEASE
 +++ b/configure/RELEASE
 @@ -19,19 +19,14 @@ SUPPORT=/home/oxygen/MOONEY/epics/synAppsSVN/support
@@ -22,7 +22,7 @@ index 0e2c166..1a76b2c 100644
 +ASYN=$(EPICS_BASE)
 +CALC=$(EPICS_BASE)
 +#IP=$(EPICS_BASE)
-+STREAM=$(EPICS_BASE)
++#STREAM=$(EPICS_BASE)
 +#IPAC=$(EPICS_BASE)
  
  # Modules required for building module application
